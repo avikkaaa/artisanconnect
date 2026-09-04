@@ -1,0 +1,11 @@
+{
+  "name": "ArtisanConnect",
+  "short_name": "ArtisanConnect",
+  "description": "A simple digital marketplace for artisans and handmade crafts.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#713b32",
+  "orientation": "portrait-primary",
+  "icons": []
+}
