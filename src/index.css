@@ -4,7 +4,9 @@
 
 :root{color:#2F2A25;background:#F7EFE3;font-synthesis:none}
 *{box-sizing:border-box}
-body{margin:0;min-width:320px;background:radial-gradient(circle at 0 0,rgba(216,155,53,.11),transparent 28%),radial-gradient(circle at 100% 10%,rgba(164,93,63,.10),transparent 30%),#F7EFE3}
-button,input{font:inherit}button{-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;background:#F7EFE3}
+body{margin:0;min-width:320px;background:radial-gradient(circle at 0 0,rgba(216,155,53,.11),transparent 28%),radial-gradient(circle at 100% 10%,rgba(164,93,63,.10),transparent 30%),#F7EFE3;overscroll-behavior-y:none}
+button,input,textarea,select{font:inherit}button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}input,textarea,select{font-size:16px}
 .pattern{background-image:radial-gradient(rgba(113,59,50,.10) 1px,transparent 1px);background-size:13px 13px}
 .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
+@media (max-width:640px){body{padding-bottom:env(safe-area-inset-bottom)}button{min-height:48px}.shadow-soft{box-shadow:0 10px 30px rgba(83,54,34,.08)}}
