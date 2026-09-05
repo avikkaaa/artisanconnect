@@ -22,8 +22,3 @@ Built for **Smart India Hackathon — PS ID 26090**.
 
 The prototype uses local React state, so no backend or API key is required.
 
-## 🚀 Run Locally
-
-```bash
-npm install
-npm run dev
