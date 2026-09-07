@@ -5,7 +5,10 @@
 :root{color:#332923;background:#F7EFE3;font-synthesis:none}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:#F7EFE3}
-body{margin:0;min-width:320px;background:radial-gradient(circle at 0 0,rgba(113,59,50,.22),transparent 30%),radial-gradient(circle at 100% 10%,rgba(164,93,63,.14),transparent 32%),linear-gradient(135deg,#F7EFE3 0%,#F9F3EA 55%,#F3E6D8 100%);overscroll-behavior-y:none;color:#332923}
+body{margin:0;min-width:320px;background:#F7EFE3;overscroll-behavior-y:none;color:#332923}
+.artisan-split-bg{position:relative;isolation:isolate;overflow:hidden;background:#F7EFE3;min-height:100vh}
+.artisan-split-bg::before{content:"";position:absolute;z-index:-1;inset:0 0 50% 0;background:#713B32;background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px),radial-gradient(rgba(45,25,18,.12) 1px,transparent 1px);background-size:17px 17px,29px 29px;background-position:0 0,8px 11px;opacity:.98}
+.artisan-split-bg::after{content:"";position:absolute;z-index:-1;left:-8%;top:43%;width:116%;height:15%;background:#713B32;clip-path:ellipse(58% 42% at 50% 50%);opacity:.98}
 button,input,textarea,select{font:inherit}button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;color:#332923}input,textarea,select{font-size:16px;color:#332923}
 input::placeholder,textarea::placeholder{color:#8a7b70;opacity:1}
 .pattern{background-image:radial-gradient(rgba(113,59,50,.10) 1px,transparent 1px);background-size:13px 13px}
