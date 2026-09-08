@@ -2,15 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{color:#332923;background:#F7EFE3;font-synthesis:none}
+:root{color:#332923;background:#f8f1e7;font-synthesis:none}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;background:#F7EFE3}
-body{margin:0;min-width:320px;background:#F7EFE3;overscroll-behavior-y:none;color:#332923}
-.artisan-split-bg{position:relative;isolation:isolate;overflow:hidden;background:#F7EFE3;min-height:100vh}
-.artisan-split-bg::before{content:"";position:absolute;z-index:-1;inset:0 0 50% 0;background:#713B32;background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px),radial-gradient(rgba(45,25,18,.12) 1px,transparent 1px);background-size:17px 17px,29px 29px;background-position:0 0,8px 11px;opacity:.98}
-.artisan-split-bg::after{content:"";position:absolute;z-index:-1;left:-8%;top:43%;width:116%;height:15%;background:#713B32;clip-path:ellipse(58% 42% at 50% 50%);opacity:.98}
-button,input,textarea,select{font:inherit}button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;color:#332923}input,textarea,select{font-size:16px;color:#332923}
-input::placeholder,textarea::placeholder{color:#8a7b70;opacity:1}
-.pattern{background-image:radial-gradient(rgba(113,59,50,.10) 1px,transparent 1px);background-size:13px 13px}
+html{scroll-behavior:smooth;background:#f8f1e7}
+body{margin:0;min-width:320px;background:#f8f1e7;overscroll-behavior-y:none;color:#332923}
+
+.artisan-split-bg{position:relative;isolation:isolate;overflow:hidden;background:#f8f1e7;min-height:100vh}
+.artisan-split-bg::before{content:"";position:absolute;z-index:-2;left:-7%;right:-7%;top:-10px;height:58vh;background-color:#713b32;background-image:radial-gradient(rgba(255,255,255,.13) 1px,transparent 1px),radial-gradient(rgba(38,19,14,.12) 1px,transparent 1px);background-size:15px 15px,27px 27px;background-position:0 0,9px 12px;border-radius:0 0 52% 48%/0 0 13% 17%;transform:rotate(-1deg)}
+.artisan-split-bg::after{content:"";position:absolute;z-index:-1;left:-10%;top:49vh;width:120%;height:18vh;background:#f8f1e7;border-radius:50% 50% 0 0/100% 100% 0 0;box-shadow:0 -10px 30px rgba(92,49,39,.04)}
+
+/* Warm, friendly chrome */
+header{transition:background .25s ease,box-shadow .25s ease}
+main>section:first-child{animation:soft-arrive .55s ease both}
+main>section:first-child h1{letter-spacing:-.045em}
+main>section:first-child>div>div:first-child{padding-top:1rem}
+
+/* Make the role chooser feel like an invitation rather than a form */
+main>section:first-child>div>div:last-child{border-radius:30px!important;box-shadow:0 24px 70px rgba(68,39,27,.12)!important;transform:translateY(4px);transition:transform .25s ease,box-shadow .25s ease}
+main>section:first-child>div>div:last-child:hover{transform:translateY(0);box-shadow:0 30px 80px rgba(68,39,27,.15)!important}
+main>section:first-child>div>div:last-child>div>button{transition:all .2s ease}
+main>section:first-child>div>div:last-child>div>button:hover{transform:translateX(3px);border-color:#b89a86!important}
+
+button{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
+button:active{transform:scale(.98)}
+
+/* Cute little handmade-feeling texture */
+.pattern{background-image:radial-gradient(rgba(113,59,50,.12) 1px,transparent 1px);background-size:13px 13px}
 .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
-@media (max-width:640px){body{padding-bottom:env(safe-area-inset-bottom)}button{min-height:48px}.shadow-soft{box-shadow:0 10px 30px rgba(83,54,34,.08)}}
+
+@keyframes soft-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media (max-width:640px){body{padding-bottom:env(safe-area-inset-bottom)}button{min-height:48px}.artisan-split-bg::before{height:51vh}.artisan-split-bg::after{top:43vh;height:14vh}.shadow-soft{box-shadow:0 10px 30px rgba(83,54,34,.08)}}
