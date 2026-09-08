@@ -4,16 +4,22 @@
 
 :root{color:#332923;background:#f8f1e7;font-synthesis:none}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;background:#f8f1e7}
-body{margin:0;min-width:320px;background:#f8f1e7;overscroll-behavior-y:none;color:#332923}
-.artisan-split-bg{position:relative;isolation:isolate;overflow:hidden;background:#f8f1e7;min-height:100vh}
-.artisan-split-bg::before{content:"";position:absolute;z-index:0;left:-7%;right:-7%;top:-10px;height:76vh;background-color:#713b32;background-image:radial-gradient(rgba(255,255,255,.13) 1px,transparent 1px),radial-gradient(rgba(38,19,14,.12) 1px,transparent 1px);background-size:15px 15px,27px 27px;background-position:0 0,9px 12px;border-radius:0 0 52% 48%/0 0 9% 12%;transform:rotate(-1deg);pointer-events:none}
-.artisan-split-bg::after{content:"";position:absolute;z-index:0;left:-10%;top:74vh;width:120%;height:14vh;background:#f8f1e7;border-radius:50% 50% 0 0/100% 100% 0 0;pointer-events:none}
+html,body{margin:0;min-width:320px;background:#f8f1e7;color:#332923}
+body{overscroll-behavior-y:none}
+
+/* Simple, strong two-tone hero: no text gets lost in the curve. */
+.artisan-split-bg{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;background:linear-gradient(to bottom,#713b32 0,#713b32 54vh,#f8f1e7 54vh,#f8f1e7 100%)}
+.artisan-split-bg::before{content:"";position:absolute;z-index:0;left:0;right:0;top:0;height:54vh;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.13) 1px,transparent 1px),radial-gradient(rgba(38,19,14,.12) 1px,transparent 1px);background-size:15px 15px,27px 27px;background-position:0 0,9px 12px}
+.artisan-split-bg::after{content:"";position:absolute;z-index:1;left:-5%;right:-5%;top:50vh;height:10vh;pointer-events:none;background:#f8f1e7;border-radius:50% 50% 0 0/100% 100% 0 0}
 .artisan-split-bg>header,.artisan-split-bg>main{position:relative;z-index:2}
+
+/* Hero copy is deliberately high-contrast and never allowed to fade. */
+main>section:first-child>div>div:first-child{position:relative;z-index:3}
 main>section:first-child>div>div:first-child h1{color:#fff9f1!important}
 main>section:first-child>div>div:first-child h1 span{color:#f2d1b3!important}
-main>section:first-child>div>div:first-child>p{color:#f4e4d8!important}
-main>section:first-child>div>div:first-child .bg-\[\#ebe4da]{background:rgba(255,248,239,.94);color:#5f493d}
+main>section:first-child>div>div:first-child>p{color:#fff1e6!important;text-shadow:0 1px 1px rgba(70,30,20,.15)}
+main>section:first-child>div>div:first-child .bg-\[\#ebe4da]{background:rgba(255,248,239,.96);color:#5f493d}
+
 header{transition:background .25s ease,box-shadow .25s ease}
 main>section:first-child{animation:soft-arrive .55s ease both}
 main>section:first-child h1{letter-spacing:-.045em}
@@ -27,5 +33,23 @@ button:active{transform:scale(.98)}
 .pattern{background-image:radial-gradient(rgba(113,59,50,.12) 1px,transparent 1px);background-size:13px 13px}
 .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
 @keyframes soft-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@media (max-width:640px){body{padding-bottom:env(safe-area-inset-bottom)}button{min-height:48px}.artisan-split-bg::before{height:70vh;border-radius:0 0 50% 50%/0 0 8% 10%}.artisan-split-bg::after{top:69vh;height:12vh;border-radius:50% 50% 0 0/100% 100% 0 0}main>section:first-child{padding-top:8px}main>section:first-child>div{gap:24px}main>section:first-child>div>div:first-child{padding:22px 8px 12px}main>section:first-child>div>div:first-child h1{font-size:clamp(3.35rem,15vw,5rem);line-height:.94}main>section:first-child>div>div:first-child>p{max-width:100%;font-size:1rem;line-height:1.55;margin-top:18px}main>section:first-child>div>div:first-child .bg-\[\#ebe4da]{font-size:.75rem}main>section:first-child>div>div:first-child>button{margin-top:4px}main>section:first-child>div>div:last-child{margin-top:4px}main>section:first-child>div>div:last-child h2{font-size:1.65rem;line-height:1.15}button.fixed{bottom:6.75rem!important;right:1rem!important;z-index:70!important}#root{padding-bottom:4.5rem}}
+
+@media (max-width:640px){
+ body{padding-bottom:env(safe-area-inset-bottom)}
+ button{min-height:48px}
+ .artisan-split-bg{background:linear-gradient(to bottom,#713b32 0,#713b32 70vh,#f8f1e7 70vh,#f8f1e7 100%)}
+ .artisan-split-bg::before{height:70vh}
+ .artisan-split-bg::after{top:66vh;height:9vh}
+ main>section:first-child{padding-top:8px}
+ main>section:first-child>div{gap:24px}
+ main>section:first-child>div>div:first-child{padding:22px 8px 12px}
+ main>section:first-child>div>div:first-child h1{font-size:clamp(3.2rem,15vw,5rem);line-height:.94}
+ main>section:first-child>div>div:first-child>p{max-width:100%;font-size:1rem;line-height:1.55;margin-top:18px}
+ main>section:first-child>div>div:first-child .bg-\[\#ebe4da]{font-size:.75rem}
+ main>section:first-child>div>div:first-child>button{margin-top:4px}
+ main>section:first-child>div>div:last-child{margin-top:4px}
+ main>section:first-child>div>div:last-child h2{font-size:1.65rem;line-height:1.15}
+ button.fixed{bottom:6.75rem!important;right:1rem!important;z-index:70!important}
+ #root{padding-bottom:4.5rem}
+}
 .shadow-soft{box-shadow:0 10px 30px rgba(83,54,34,.08)}
