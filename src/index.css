@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ArtisanConnect — warm, expressive BOHO design system */
+/* ArtisanConnect — boho split-screen visual system */
 :root{color:#382a25;background:#f7efe4;font-synthesis:none}
 *{box-sizing:border-box}
 html,body{margin:0;min-width:320px;background:#f7efe4;color:#382a25}
 body{overscroll-behavior-y:none;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 
-/* Signature boho backdrop: clay, sand, cream + subtle textile motifs. */
-.artisan-split-bg{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;background:linear-gradient(to bottom,#74443b 0,#74443b 54vh,#f7efe4 54vh,#f7efe4 100%)}
-.artisan-split-bg::before{content:"✦  ◌  ✧  ◌  ✦";position:absolute;z-index:0;left:0;right:0;top:8vh;text-align:center;font-family:Georgia,serif;font-size:22px;letter-spacing:28px;color:rgba(247,225,199,.25);pointer-events:none;white-space:nowrap}
-.artisan-split-bg::after{content:"";position:absolute;z-index:1;left:-5%;right:-5%;top:50vh;height:11vh;pointer-events:none;background:#f7efe4;border-radius:50% 50% 0 0/100% 100% 0 0;box-shadow:0 -14px 0 rgba(219,181,146,.22)}
+/* Desktop hero: RED/CLAY LEFT + CREAM RIGHT */
+.artisan-split-bg{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;background:#f7efe4}
+.artisan-split-bg::before{content:"";position:absolute;z-index:0;inset:0 50% 0 0;background:#74443b;pointer-events:none}
+.artisan-split-bg::after{content:"✦   ◌   ✧   ◌   ✦";position:absolute;z-index:1;left:0;top:14vh;width:50%;text-align:center;font-family:Georgia,serif;font-size:20px;letter-spacing:14px;color:rgba(247,225,199,.24);pointer-events:none;white-space:nowrap}
 .artisan-split-bg>header,.artisan-split-bg>main{position:relative;z-index:2}
 
-/* Boho palette overrides. */
+/* Warm boho palette */
 .bg-\[\#fbf7ef\],.bg-\[\#f8f1e7\]{background-color:#f7efe4!important}
 .text-\[\#302a26\],.text-\[\#332923\]{color:#382a25!important}
 .bg-\[\#713b32\]{background-color:#74443b!important}
@@ -27,42 +27,36 @@ body{overscroll-behavior-y:none;font-family:Inter,ui-sans-serif,system-ui,-apple
 main>section:first-child>div>div:first-child{position:relative;z-index:3}
 main>section:first-child>div>div:first-child h1{color:#fff8ee!important;font-family:Georgia,serif!important;font-weight:900}
 main>section:first-child>div>div:first-child h1 span{color:#e9c39e!important}
-main>section:first-child>div>div:first-child>p{color:#faeee4!important;text-shadow:none}
+main>section:first-child>div>div:first-child>p{color:#faeee4!important}
 main>section:first-child>div>div:first-child .bg-\[\#ebe4da]{background:rgba(255,247,237,.94);color:#62473d}
 
-/* Distinct boho cards: organic curves, warm borders, softer shadows. */
-header{transition:background .25s ease,box-shadow .25s ease;border-bottom-color:#ddc6ad!important}
-main>section:first-child{animation:boho-arrive .6s ease both}
-main>section:first-child h1{letter-spacing:-.045em}
-main>section:first-child>div>div:first-child{padding-top:1rem}
+/* Keep the right panel clearly cream, like a tactile paper card. */
 main>section:first-child>div>div:last-child{border-radius:34px!important;border-color:#decab4!important;background:#fffaf3!important;box-shadow:0 24px 65px rgba(83,49,35,.15)!important;transform:translateY(4px);transition:transform .25s ease,box-shadow .25s ease}
 main>section:first-child>div>div:last-child:hover{transform:translateY(0) rotate(-.15deg);box-shadow:0 30px 75px rgba(83,49,35,.18)!important}
+main>section:first-child h1{letter-spacing:-.045em}
 main>section:first-child>div>div:last-child>div>button{transition:all .2s ease}
 main>section:first-child>div>div:last-child>div>button:hover{transform:translateY(-2px);border-color:#b88769!important}
+header{transition:background .25s ease,box-shadow .25s ease;border-bottom-color:#ddc6ad!important}
 button{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
 button:active{transform:scale(.98)}
 button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid rgba(116,68,59,.24);outline-offset:2px}
-
-/* Hand-drawn textile-inspired background pattern. */
 .pattern{background-color:#f8eee2;background-image:radial-gradient(rgba(116,68,59,.13) 1px,transparent 1px),linear-gradient(45deg,transparent 47%,rgba(184,135,105,.09) 48%,rgba(184,135,105,.09) 52%,transparent 53%);background-size:18px 18px,36px 36px}
 .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
 .shadow-soft{box-shadow:0 12px 34px rgba(83,49,35,.10)}
 
-@keyframes boho-arrive{from{opacity:0;transform:translateY(14px) rotate(.4deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
-
 @media (max-width:640px){
  body{padding-bottom:env(safe-area-inset-bottom)}
  button{min-height:48px}
- .artisan-split-bg{background:linear-gradient(to bottom,#74443b 0,#74443b 70vh,#f7efe4 70vh,#f7efe4 100%)}
- .artisan-split-bg::before{height:70vh;font-size:17px;letter-spacing:18px}
- .artisan-split-bg::after{top:66vh;height:9vh}
+ /* On mobile stack the two halves vertically rather than squeezing them. */
+ .artisan-split-bg{background:linear-gradient(to bottom,#74443b 0,#74443b 56%,#f7efe4 56%,#f7efe4 100%)}
+ .artisan-split-bg::before{inset:0 0 44% 0}
+ .artisan-split-bg::after{left:0;top:12vh;width:100%;font-size:17px;letter-spacing:10px}
  main>section:first-child{padding-top:8px}
  main>section:first-child>div{gap:24px}
  main>section:first-child>div>div:first-child{padding:22px 8px 12px}
  main>section:first-child>div>div:first-child h1{font-size:clamp(3.2rem,15vw,5rem);line-height:.94}
  main>section:first-child>div>div:first-child>p{max-width:100%;font-size:1rem;line-height:1.55;margin-top:18px}
  main>section:first-child>div>div:first-child .bg-\[\#ebe4da]{font-size:.75rem}
- main>section:first-child>div>div:first-child>button{margin-top:4px}
  main>section:first-child>div>div:last-child{margin-top:4px;border-radius:28px!important}
  main>section:first-child>div>div:last-child h2{font-size:1.65rem;line-height:1.15}
  button.fixed{bottom:6.75rem!important;right:1rem!important;z-index:70!important}
