@@ -16,7 +16,7 @@ body{overscroll-behavior-y:none;font-family:Inter,ui-sans-serif,system-ui,-apple
 .bg-\[\#f2e3d1\],.bg-\[\#f6e9da\],.bg-\[\#f4ecdf\]{background-color:#ead8c2!important}
 .text-\[\#776b61\],.text-\[\#7c7067\],.text-\[\#7b6d62\]{color:#79685d!important}
 
-/* HOME: direct positional selectors intentionally avoid :has so the design works in every supported browser. */
+/* BOHO HOME */
 main>section:first-child{background:#f5eadb}
 main>section:first-child>div{width:100%;max-width:1180px}
 main>section:first-child>div>div:first-child{display:flex!important;position:relative;min-height:600px;padding:clamp(42px,5vw,72px);border-radius:18px!important;background-color:#8d4338!important;background-image:radial-gradient(rgba(255,239,215,.13) 1px,transparent 1px),linear-gradient(135deg,rgba(255,255,255,.05),transparent 35%,rgba(52,24,18,.10));background-size:13px 13px,100% 100%;color:#fff8ed;justify-content:space-between;overflow:hidden;box-shadow:12px 18px 0 rgba(113,59,50,.10),0 28px 60px rgba(83,49,35,.16)}
@@ -27,9 +27,14 @@ main>section:first-child>div>div:first-child h1 span{color:#efc796!important}
 main>section:first-child>div>div:first-child>p{position:relative;z-index:2;color:#fff0e3!important;max-width:440px}
 
 /* RIGHT CREAM LOGIN PANEL */
-main>section:first-child>div>div:last-child{display:flex;flex-direction:column;justify-content:center;min-height:600px;padding:clamp(18px,3vw,45px);border:0;border-radius:0!important;background:#f5eadb!important;box-shadow:none!important;transform:none!important}
-main>section:first-child>div>div:last-child::before{content:"ARTISANCONNECT";display:block;margin-bottom:12px;font:800 11px/1 Inter,sans-serif;letter-spacing:.24em;color:#a06e59}
-main>section:first-child>div>div:last-child h2{font-family:Georgia,serif;letter-spacing:-.04em;color:#382a25!important}
+main>section:first-child>div>div:last-child{display:flex;flex-direction:row;flex-wrap:wrap;align-content:center;justify-content:flex-start;column-gap:14px;row-gap:16px;min-height:600px;padding:clamp(18px,3vw,45px);border:0;border-radius:0!important;background:#f5eadb!important;box-shadow:none!important;transform:none!important}
+main>section:first-child>div>div:last-child::before{content:"ARTISANCONNECT";display:block;flex:0 0 100%;margin-bottom:0;font:800 11px/1 Inter,sans-serif;letter-spacing:.24em;color:#a06e59}
+main>section:first-child>div>div:last-child h2{flex:0 0 100%;font-family:Georgia,serif;letter-spacing:-.04em;color:#382a25!important}
+main>section:first-child>div>div:last-child>p{flex:0 0 100%}
+main>section:first-child>div>div:last-child>div{flex:0 0 100%}
+main>section:first-child>div>div:last-child>button{margin-top:0!important;min-height:56px}
+main>section:first-child>div>div:last-child>button:nth-last-child(2){flex:1 1 52%;min-width:190px}
+main>section:first-child>div>div:last-child>button:last-child{flex:1 1 35%;min-width:160px}
 main>section:first-child>div>div:last-child button{border-radius:16px}
 main>section:first-child>div>div:last-child button:hover{transform:translateY(-2px);border-color:#ad735d!important;box-shadow:0 8px 18px rgba(83,49,35,.08)}
 
@@ -54,7 +59,9 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
  main>section:first-child>div{gap:18px}
  main>section:first-child>div>div:first-child{min-height:390px;padding:30px 24px;border-radius:15px!important;box-shadow:7px 10px 0 rgba(113,59,50,.10),0 18px 40px rgba(83,49,35,.13)}
  main>section:first-child>div>div:first-child h1{font-size:clamp(3rem,15vw,4.5rem);line-height:.94}
- main>section:first-child>div>div:last-child{padding:16px 4px 20px}
+ main>section:first-child>div>div:last-child{padding:16px 4px 20px;column-gap:10px}
  main>section:first-child>div>div:last-child h2{font-size:1.8rem;line-height:1.1}
+ main>section:first-child>div>div:last-child>button:nth-last-child(2){min-width:0;flex-basis:100%}
+ main>section:first-child>div>div:last-child>button:last-child{min-width:0;flex-basis:100%}
  #root{padding-bottom:4.5rem}
 }
