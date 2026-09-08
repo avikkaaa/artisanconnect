@@ -11,6 +11,12 @@ body{margin:0;min-width:320px;background:#f8f1e7;overscroll-behavior-y:none;colo
 .artisan-split-bg::before{content:"";position:absolute;z-index:-2;left:-7%;right:-7%;top:-10px;height:58vh;background-color:#713b32;background-image:radial-gradient(rgba(255,255,255,.13) 1px,transparent 1px),radial-gradient(rgba(38,19,14,.12) 1px,transparent 1px);background-size:15px 15px,27px 27px;background-position:0 0,9px 12px;border-radius:0 0 52% 48%/0 0 13% 17%;transform:rotate(-1deg)}
 .artisan-split-bg::after{content:"";position:absolute;z-index:-1;left:-10%;top:49vh;width:120%;height:18vh;background:#f8f1e7;border-radius:50% 50% 0 0/100% 100% 0 0;box-shadow:0 -10px 30px rgba(92,49,39,.04)}
 
+/* Hero contrast: light, warm type over the terracotta panel */
+main>section:first-child>div>div:first-child h1{color:#fff9f1}
+main>section:first-child>div>div:first-child h1 span{color:#f2d1b3!important}
+main>section:first-child>div>div:first-child>p{color:#f4e4d8}
+main>section:first-child>div>div:first-child .bg-\[\#ebe4da\]{background:rgba(255,248,239,.94);color:#5f493d}
+
 /* Warm, friendly chrome */
 header{transition:background .25s ease,box-shadow .25s ease}
 main>section:first-child{animation:soft-arrive .55s ease both}
@@ -26,7 +32,6 @@ main>section:first-child>div>div:last-child>div>button:hover{transform:translate
 button{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
 button:active{transform:scale(.98)}
 
-/* Cute little handmade-feeling texture */
 .pattern{background-image:radial-gradient(rgba(113,59,50,.12) 1px,transparent 1px);background-size:13px 13px}
 .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
 
