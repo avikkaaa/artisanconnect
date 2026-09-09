@@ -1,37 +1,389 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{color:#382a25;background:#f5eadb;font-synthesis:none}*{box-sizing:border-box}html,body,#root{margin:0;min-width:320px;min-height:100%;background:#f5eadb;color:#382a25}body{overscroll-behavior-y:none;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.bg-\[\#fbf7ef\],.bg-\[\#f8f1e7\]{background-color:#f5eadb!important}.text-\[\#302a26\],.text-\[\#332923\]{color:#382a25!important}.bg-\[\#713b32\]{background-color:#8d4338!important}.text-\[\#713b32\]{color:#8d4338!important}.border-\[\#e9dccb\],.border-\[\#eadfd1\],.border-\[\#e8d9c6\]{border-color:#ddc8ad!important}.bg-\[\#fffdf9\]{background-color:#fffaf2!important}.bg-\[\#f2e3d1\],.bg-\[\#f6e9da\],.bg-\[\#f4ecdf\]{background-color:#ead8c2!important}.text-\[\#776b61\],.text-\[\#7c7067\],.text-\[\#7b6d62\]{color:#79685d!important}
-.artisan-split-bg{position:relative;min-height:100vh;background:#f5eadb;overflow-x:hidden}.artisan-split-bg:before{content:"";position:absolute;z-index:0;left:0;right:0;top:68px;height:520px;background-color:#8d4338;background-image:radial-gradient(rgba(255,239,215,.18) 1.3px,transparent 1.8px),radial-gradient(rgba(70,25,18,.10) 1px,transparent 1.6px);background-size:15px 15px,23px 23px;border-radius:0 0 48% 9%/0 0 12% 5%;pointer-events:none}.artisan-split-bg>header,.artisan-split-bg>main{position:relative;z-index:1}
-.boho-dots{background-image:radial-gradient(rgba(255,239,215,.22) 1.2px,transparent 1.8px),radial-gradient(rgba(72,25,18,.12) 1px,transparent 1.6px);background-size:15px 15px,23px 23px}.pattern{background-color:#f8eee2;background-image:radial-gradient(rgba(141,67,56,.12) 1px,transparent 1px),linear-gradient(45deg,transparent 47%,rgba(184,135,105,.08) 48%,rgba(184,135,105,.08) 52%,transparent 53%);background-size:18px 18px,36px 36px}.shadow-soft{box-shadow:0 12px 34px rgba(83,49,35,.10)}button{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}button:active{transform:scale(.98)}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid rgba(141,67,56,.22);outline-offset:2px}header{border-bottom-color:#ddc8ad!important;background:rgba(250,242,231,.96)!important}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
-main>section:not(:first-child){animation:catalog-arrive .45s ease both}main>section:has(>div>div>div>label) h1{font-family:Georgia,serif;letter-spacing:-.045em}main>section:has(>div>div>div>label)>div:first-child{border-bottom:1px solid #ddc8ad;padding-bottom:18px}main>section:has(>div>div>div>label)>div:first-child:after{content:"AI CATALOG • TURN ONE PHOTO INTO A MARKET-READY LISTING";display:block;margin-top:8px;font-size:10px;font-weight:900;letter-spacing:.12em;color:#a06e59}main>section:has(>div>div>div>label)>div:nth-child(2)>div:first-child{border:1px solid #d8bea0!important;background:#fffaf2!important;box-shadow:0 18px 45px rgba(83,49,35,.10);padding:18px!important}main>section:has(>div>div>div>label)>div:nth-child(2)>div:first-child>div:first-child{height:390px!important;border-radius:22px!important;background:#ead8c2!important;border:2px dashed #c99f7c;position:relative}main>section:has(>div>div>div>label)>div:nth-child(2)>div:first-child>div:first-child:after{content:"1 • SHOW YOUR CRAFT";position:absolute;left:18px;top:16px;border-radius:999px;background:#8d4338;color:#fff8ed;padding:7px 11px;font-size:10px;font-weight:900;letter-spacing:.08em}main>section:has(>div>div>div>label)>div:nth-child(2)>div:first-child label{border:1px solid #c9b29b!important;background:#fffaf2!important;color:#5d493d!important}main>section:has(>div>div>div>label)>div:nth-child(2)>div:first-child button{width:100%;background:#8d4338!important;border-radius:16px!important;box-shadow:0 8px 20px rgba(141,67,56,.18)}main>section:has(>div>div>div>label)>div:nth-child(2)>div:last-child{border:1px solid #d8bea0!important;background:#fffaf2!important;box-shadow:0 18px 45px rgba(83,49,35,.08)}main>section:has(>div>div>div>label)>div:nth-child(2)>div:last-child:before{content:"2 • AI BUILDS YOUR CATALOG";display:block;margin-bottom:18px;color:#8d4338;font-size:11px;font-weight:900;letter-spacing:.12em}.fixed.inset-0:has(img) [class*=tracking-widest]{color:#a06e59}.fixed.inset-0:has(img) h1{font-family:Georgia,serif;letter-spacing:-.045em}
-/* Richer catalog gallery: each demo card gets its own craft image instead of repeating one category photo. */
-main>section:last-child>div:nth-of-type(3)>button:nth-child(1) img{content:url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=85')}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(2) img{content:url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=85')}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(3) img{content:url('https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=900&q=85')}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(4) img{content:url('https://images.unsplash.com/photo-1583845112203-454c5d3f1d6b?auto=format&fit=crop&w=900&q=85')}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(5) img{content:url('https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=900&q=85')}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(6) img{content:url('https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=900&q=85')}
-/* Demo storefront gets the same visual variety. */
-.fixed.inset-0>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-child(1) img{content:url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=85')}
-.fixed.inset-0>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-child(2) img{content:url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=85')}
-.fixed.inset-0>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-child(3) img{content:url('https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=900&q=85')}
-.fixed.inset-0>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-child(4) img{content:url('https://images.unsplash.com/photo-1583845112203-454c5d3f1d6b?auto=format&fit=crop&w=900&q=85')}
-.fixed.inset-0>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-child(5) img{content:url('https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=900&q=85')}
-.fixed.inset-0>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-child(6) img{content:url('https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=900&q=85')}
-/* Demo data deliberately uses a wider, believable confidence range rather than near-perfect scores. */
-main>section:last-child>div:nth-of-type(3)>button:nth-child(1) span.absolute{font-size:0}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(1) span.absolute:after{content:'89% AI';font-size:12px}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(2) span.absolute{font-size:0}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(2) span.absolute:after{content:'84% AI';font-size:12px}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(3) span.absolute{font-size:0}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(3) span.absolute:after{content:'78% AI';font-size:12px}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(4) span.absolute{font-size:0}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(4) span.absolute:after{content:'91% AI';font-size:12px}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(5) span.absolute{font-size:0}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(5) span.absolute:after{content:'83% AI';font-size:12px}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(6) span.absolute{font-size:0}
-main>section:last-child>div:nth-of-type(3)>button:nth-child(6) span.absolute:after{content:'76% AI';font-size:12px}
-@keyframes catalog-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:900px){main>section:first-child{padding:26px 20px 54px!important}main>section:first-child>div{grid-template-columns:1fr;gap:28px;max-width:650px}main>section:first-child>div>div:first-child{min-height:430px;padding:38px 30px}main>section:first-child>div>div:last-child{min-height:auto;padding:20px 10px 10px}}
-@media(max-width:640px){body{padding-bottom:env(safe-area-inset-bottom)}button{min-height:48px}.artisan-split-bg:before{top:68px;height:470px}.artisan-split-bg{background:#f5eadb}main>section:first-child{padding:18px 14px 45px!important}main>section:first-child>div{gap:18px}main>section:first-child>div>div:first-child{min-height:390px;padding:30px 24px;border-radius:15px!important;box-shadow:7px 10px 0 rgba(113,59,50,.10),0 18px 40px rgba(83,49,35,.13)}main>section:first-child>div>div:first-child h1{font-size:clamp(3rem,15vw,4.5rem);line-height:.94}main>section:first-child>div>div:last-child{padding:16px 4px 20px;column-gap:10px}main>section:first-child>div>div:last-child h2{font-size:1.8rem;line-height:1.1}main>section:first-child>div>div:last-child>button:nth-last-child(2),main>section:first-child>div>div:last-child>button:last-child{min-width:0;flex-basis:100%}main>section:has(>div>div>div>label)>div:nth-child(2){grid-template-columns:1fr!important}main>section:has(>div>div>div>label)>div:nth-child(2)>div:first-child>div:first-child{height:310px!important}main>section:has(>div>div>div>label)>div:nth-child(2)>div:last-child{min-height:320px}#root{padding-bottom:4.5rem}}
+
+/* =========================
+   ARTISANCONNECT
+   Simple • Warm • Slightly Boho
+========================= */
+
+:root {
+  color: #3b2d27;
+  background: #f7eee2;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  background: #f7eee2;
+  color: #3b2d27;
+  overscroll-behavior-y: none;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   WARM BACKGROUND
+========================= */
+
+.artisan-split-bg {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f7eee2;
+}
+
+/* Main terracotta hero shape */
+.artisan-split-bg::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  top: 70px;
+  left: 0;
+
+  width: min(62vw, 900px);
+  height: 520px;
+
+  background-color: #8b493b;
+
+  /* very subtle handmade texture */
+  background-image:
+    radial-gradient(
+      rgba(255, 240, 220, 0.13) 1px,
+      transparent 1.5px
+    );
+
+  background-size: 18px 18px;
+
+  border-radius: 0 0 55px 0;
+
+  pointer-events: none;
+}
+
+/* Small organic cream curve */
+.artisan-split-bg::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  top: 510px;
+  left: -5%;
+  width: 75%;
+  height: 90px;
+
+  background: #f7eee2;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* Keep actual content above decoration */
+.artisan-split-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: rgba(250, 244, 235, 0.96) !important;
+  border-bottom: 1px solid #dfcdb8 !important;
+}
+
+/* =========================
+   COLOURS
+========================= */
+
+.bg-\[\#fbf7ef\],
+.bg-\[\#f8f1e7\] {
+  background-color: #f7eee2 !important;
+}
+
+.bg-\[\#713b32\] {
+  background-color: #8b493b !important;
+}
+
+.text-\[\#713b32\] {
+  color: #8b493b !important;
+}
+
+.text-\[\#302a26\],
+.text-\[\#332923\] {
+  color: #3b2d27 !important;
+}
+
+.bg-\[\#fffdf9\] {
+  background-color: #fffaf3 !important;
+}
+
+.bg-\[\#f2e3d1\],
+.bg-\[\#f6e9da\],
+.bg-\[\#f4ecdf\] {
+  background-color: #ead9c4 !important;
+}
+
+/* =========================
+   BOHO TEXTURE
+========================= */
+
+.pattern {
+  background-color: #f8eee3;
+
+  background-image:
+    radial-gradient(
+      rgba(139, 73, 59, 0.09) 1px,
+      transparent 1px
+    );
+
+  background-size: 20px 20px;
+}
+
+.boho-dots {
+  background-image:
+    radial-gradient(
+      rgba(255, 238, 215, 0.16) 1px,
+      transparent 1.5px
+    );
+
+  background-size: 18px 18px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.shadow-soft {
+  box-shadow:
+    0 12px 35px rgba(74, 45, 32, 0.09);
+}
+
+button {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(139, 73, 59, 0.22);
+  outline-offset: 2px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+  color: #3b2d27;
+  font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9a897b;
+  opacity: 1;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .artisan-split-bg::before {
+    width: 100%;
+    height: 460px;
+    border-radius: 0 0 35px 35px;
+  }
+
+  .artisan-split-bg::after {
+    top: 420px;
+    width: 110%;
+    height: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  button {
+    min-height: 48px;
+  }
+
+  .artisan-split-bg {
+    background: #f7eee2;
+  }
+
+  .artisan-split-bg::before {
+    top: 64px;
+    height: 430px;
+    width: 100%;
+
+    border-radius:
+      0 0
+      30px 30px;
+  }
+
+  .artisan-split-bg::after {
+    top: 400px;
+    left: -15%;
+    width: 130%;
+    height: 75px;
+  }
+
+  /* Hero */
+  main > section:first-child {
+    padding:
+      22px
+      16px
+      45px !important;
+  }
+
+  main > section:first-child > div {
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+  }
+
+  /* Terracotta panel */
+  main > section:first-child > div > div:first-child {
+    min-height: 400px;
+
+    padding:
+      34px
+      24px;
+
+    border-radius: 18px !important;
+
+    box-shadow:
+      0 16px 35px
+      rgba(80, 45, 30, 0.13);
+  }
+
+  /* Big hero text */
+  main > section:first-child
+    > div
+    > div:first-child h1 {
+
+    font-size:
+      clamp(3rem, 14vw, 4.4rem);
+
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+  }
+
+  /* Right card */
+  main > section:first-child
+    > div
+    > div:last-child {
+
+    padding:
+      18px
+      4px
+      22px;
+  }
+
+  main > section:first-child
+    > div
+    > div:last-child h2 {
+
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  /* Prevent button overlap */
+  main > section:first-child
+    > div
+    > div:last-child
+    button {
+
+    max-width: 100%;
+  }
+
+  /* AI catalog mobile */
+  main > section:has(> div > div > div > label)
+    > div:nth-child(2) {
+
+    grid-template-columns: 1fr !important;
+  }
+
+  main > section:has(> div > div > div > label)
+    > div:nth-child(2)
+    > div:first-child
+    > div:first-child {
+
+    height: 300px !important;
+    border-radius: 20px !important;
+  }
+
+  main > section:has(> div > div > div > label)
+    > div:nth-child(2)
+    > div:last-child {
+
+    min-height: 300px;
+  }
+
+  #root {
+    padding-bottom: 4.5rem;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
